@@ -1,0 +1,33 @@
+[project]
+name = "argon-dashboard-django"
+version = "1.0.2"
+description = "Django admin dashboard built on top of the Argon Dashboard Bootstrap 4 UI kit."
+requires-python = ">=3.9"
+dependencies = [
+    "asgiref>=3.4.1",
+    "dj-database-url>=0.5.0",
+    "Django>=3.2.6",
+    "gunicorn>=20.1.0",
+    "python-decouple>=3.4",
+    "pytz>=2021.1",
+    "sqlparse>=0.4.2",
+    "whitenoise>=5.3.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "autopep8>=1.5.7",
+    "pycodestyle>=2.7.0",
+]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.backends.legacy:build"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["apps*", "core*"]
+
+[tool.pycodestyle]
+max-line-length = 100
+exclude = ["migrations", ".git", "__pycache__"]

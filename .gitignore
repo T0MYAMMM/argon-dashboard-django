@@ -15,6 +15,9 @@ __pycache__/
 env
 venv
 
+# environment variables
+.env
+
 # other
 .DS_Store
 
